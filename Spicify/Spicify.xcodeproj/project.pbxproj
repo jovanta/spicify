@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4EB55062266F5D9700E5A0FF /* SpiceRecognition .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EB55061266F5D9700E5A0FF /* SpiceRecognition .mlmodel */; };
+		4EC535E8266F550000DF2A73 /* maincamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC535E7266F550000DF2A73 /* maincamera.storyboard */; };
+		4EC535EA266F552700DF2A73 /* maincameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC535E9266F552700DF2A73 /* maincameraViewController.swift */; };
 		E0C31896266E6EB900CABE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C31895266E6EB900CABE34 /* AppDelegate.swift */; };
 		E0C31898266E6EB900CABE34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C31897266E6EB900CABE34 /* SceneDelegate.swift */; };
 		E0C3189A266E6EB900CABE34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C31899266E6EB900CABE34 /* ViewController.swift */; };
@@ -35,6 +38,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4EB55061266F5D9700E5A0FF /* SpiceRecognition .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "SpiceRecognition .mlmodel"; sourceTree = "<group>"; };
+		4EC535E7266F550000DF2A73 /* maincamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = maincamera.storyboard; sourceTree = "<group>"; };
+		4EC535E9266F552700DF2A73 /* maincameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maincameraViewController.swift; sourceTree = "<group>"; };
 		E0C31892266E6EB900CABE34 /* Spicify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spicify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C31895266E6EB900CABE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C31897266E6EB900CABE34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,6 +101,7 @@
 		E0C31894266E6EB900CABE34 /* Spicify */ = {
 			isa = PBXGroup;
 			children = (
+				4EB55061266F5D9700E5A0FF /* SpiceRecognition .mlmodel */,
 				E0C318D3266E6F2800CABE34 /* Storyboard */,
 				E0C318D2266E6F1900CABE34 /* ViewController */,
 				E0C31895266E6EB900CABE34 /* AppDelegate.swift */,
@@ -112,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				E0C318C8266E6EFB00CABE34 /* InformationViewController.swift */,
+				4EC535E9266F552700DF2A73 /* maincameraViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -120,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				E0C318CD266E6F0F00CABE34 /* Information.storyboard */,
+				4EC535E7266F550000DF2A73 /* maincamera.storyboard */,
 			);
 			path = Storyboard;
 			sourceTree = "<group>";
@@ -231,6 +240,7 @@
 				E0C3189D266E6EB900CABE34 /* Main.storyboard in Resources */,
 				E0C318E3266E767100CABE34 /* Assets.xcassets in Resources */,
 				E0C318CE266E6F0F00CABE34 /* Information.storyboard in Resources */,
+				4EC535E8266F550000DF2A73 /* maincamera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,6 +266,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0C3189A266E6EB900CABE34 /* ViewController.swift in Sources */,
+				4EC535EA266F552700DF2A73 /* maincameraViewController.swift in Sources */,
+				4EB55062266F5D9700E5A0FF /* SpiceRecognition .mlmodel in Sources */,
 				E0C31896266E6EB900CABE34 /* AppDelegate.swift in Sources */,
 				E0C31898266E6EB900CABE34 /* SceneDelegate.swift in Sources */,
 				E0C318C9266E6EFB00CABE34 /* InformationViewController.swift in Sources */,
@@ -433,7 +445,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AU84RKKUXN;
+				DEVELOPMENT_TEAM = 9Z4Q9W97SA;
 				INFOPLIST_FILE = Spicify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -452,7 +464,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = AU84RKKUXN;
+				DEVELOPMENT_TEAM = 9Z4Q9W97SA;
 				INFOPLIST_FILE = Spicify/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
