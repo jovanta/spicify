@@ -8,7 +8,22 @@
 import Foundation
 import UIKit
 
-enum SpiceType: String, CaseIterable {
+class Spice {
+    var spiceName       = ["Ginger", "Turmeric", "Galangal", "Aromatic Ginger"]
+    var spiceIndoName   = ["Jahe", "Kunyit", "Lengkuas", "Kencur"]
+    var spiceBioName    = ["Zingiber officinale", "Curcuma longa", "Alphinia galanga", "Kaempferia galanga"]
+    var spiceAroma      = ["Pungent - Spicy", "Orangey Ginger", "Peppery Strong", "Slightly Spicy"]
+    var spiceTaste      = ["Peppery Sweet", "Pungent - Bitter", "Extra Citrusy", "Sickly Sweet"]
+    var spiceImage      =  [#imageLiteral(resourceName: "Ginger Main"), #imageLiteral(resourceName: "Turmeric Main"), #imageLiteral(resourceName: "Galangal Main"), #imageLiteral(resourceName: "Aromatic Ginger Main")]
+    var spiceUsageLabel = [
+        "Drinks, Stir fry, Soups, Curry",
+        "Curry, Drinks, Soup, Salad",
+        "Marinades, Soups, Curries, Stir fry, Sauces",
+        "Soup, Curry, Spices, Drinks"
+    ]
+}
+
+/*enum SpiceType: String, CaseIterable {
     case ginger         = "Ginger"
     case galangal       = "Galangal"
     case turmeric       = "Turmeric"
@@ -44,4 +59,4 @@ class Spice {
         self.bioName    = bioName
         self.type       = type
     }
-}
+} */
