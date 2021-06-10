@@ -16,6 +16,7 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
+    
     private let shutterButton : UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
@@ -23,7 +24,10 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         button.layer.borderColor = UIColor.white.cgColor
         return button
     }()
-
+    
+    
+    
+    
     var prediction = String()
     
     override func viewDidLoad() {
@@ -103,8 +107,12 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! InformationViewController
-        vc.prediction = prediction
+        if (segue.identifier == "informationSegue") {
+            let vc = segue.destination as! InformationViewController
+                vc.prediction = prediction
+        }
+
+        
     }
     
     @objc private func didTapTakePhoto(){
@@ -164,6 +172,20 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
             }
             return nil
         }
+    
+    
+    
+    @IBOutlet weak var snaptipsBtn: UIButton!
+    
+    
+    
+    
+    @IBAction func snaptipsBtn(_ sender: UIButton) {
+    
+
+    }
+    
+    
     /*
     // MARK: - Navigation
 
