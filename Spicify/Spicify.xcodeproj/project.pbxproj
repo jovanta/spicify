@@ -13,6 +13,8 @@
 		4EC535E8266F550000DF2A73 /* maincamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC535E7266F550000DF2A73 /* maincamera.storyboard */; };
 		4EC535EA266F552700DF2A73 /* maincameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC535E9266F552700DF2A73 /* maincameraViewController.swift */; };
 		E0231274267139F3006E1974 /* SpiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231273267139F3006E1974 /* SpiceModel.swift */; };
+		E02312882672117A006E1974 /* UsageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02312872672117A006E1974 /* UsageCollectionViewCell.swift */; };
+		E023128D267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023128C267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift */; };
 		E0C31896266E6EB900CABE34 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C31895266E6EB900CABE34 /* AppDelegate.swift */; };
 		E0C31898266E6EB900CABE34 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C31897266E6EB900CABE34 /* SceneDelegate.swift */; };
 		E0C3189A266E6EB900CABE34 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C31899266E6EB900CABE34 /* ViewController.swift */; };
@@ -47,6 +49,8 @@
 		4EC535E7266F550000DF2A73 /* maincamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = maincamera.storyboard; sourceTree = "<group>"; };
 		4EC535E9266F552700DF2A73 /* maincameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maincameraViewController.swift; sourceTree = "<group>"; };
 		E0231273267139F3006E1974 /* SpiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiceModel.swift; sourceTree = "<group>"; };
+		E02312872672117A006E1974 /* UsageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCollectionViewCell.swift; sourceTree = "<group>"; };
+		E023128C267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedSpiceCollectionViewCell.swift; sourceTree = "<group>"; };
 		E0C31892266E6EB900CABE34 /* Spicify.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Spicify.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E0C31895266E6EB900CABE34 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E0C31897266E6EB900CABE34 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +98,15 @@
 			path = Model;
 			sourceTree = "<group>";
 		};
+		E023127B26721108006E1974 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				E02312872672117A006E1974 /* UsageCollectionViewCell.swift */,
+				E023128C267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
 		E0C31889266E6EB900CABE34 = {
 			isa = PBXGroup;
 			children = (
@@ -115,8 +128,9 @@
 		E0C31894266E6EB900CABE34 /* Spicify */ = {
 			isa = PBXGroup;
 			children = (
-				E0231272267139DE006E1974 /* Model */,
+				E023127B26721108006E1974 /* CollectionViewCell */,
 				4EB55061266F5D9700E5A0FF /* SpiceRecognition .mlmodel */,
+				E0231272267139DE006E1974 /* Model */,
 				E0C318D3266E6F2800CABE34 /* Storyboard */,
 				E0C318D2266E6F1900CABE34 /* ViewController */,
 				E0C31895266E6EB900CABE34 /* AppDelegate.swift */,
@@ -285,12 +299,14 @@
 			files = (
 				E0231274267139F3006E1974 /* SpiceModel.swift in Sources */,
 				E0C3189A266E6EB900CABE34 /* ViewController.swift in Sources */,
+				E02312882672117A006E1974 /* UsageCollectionViewCell.swift in Sources */,
 				4EC535EA266F552700DF2A73 /* maincameraViewController.swift in Sources */,
 				4EB55062266F5D9700E5A0FF /* SpiceRecognition .mlmodel in Sources */,
 				E0C31896266E6EB900CABE34 /* AppDelegate.swift in Sources */,
 				E0C31898266E6EB900CABE34 /* SceneDelegate.swift in Sources */,
 				E0C318C9266E6EFB00CABE34 /* InformationViewController.swift in Sources */,
 				414DED11266F53FB001B94B2 /* onboardingViewController.swift in Sources */,
+				E023128D267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
