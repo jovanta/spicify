@@ -15,6 +15,8 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var detailIndoName: UILabel!
     @IBOutlet weak var detailBioName: UILabel!
     @IBOutlet weak var detailImage: UIImageView!
+    @IBOutlet weak var detailAroma: UILabel!
+    @IBOutlet weak var detailTaste: UILabel!
     
     var prediction = String()
     
@@ -38,23 +40,34 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         relatedCollectionView.delegate = self
         relatedCollectionView.dataSource = self
         
+        // take the scanned spices
+        selectedSpice = spicesList[0]
         loadData()
     }
     
     // Take from scan result and validate
     func loadData(){
-        // validasi scan result to display the spice detail
-        // contoh : selectedSpice = spicesList.filter{ $0.name == selectedSpice?.name }
-        selectedSpice = spicesList[2]
         
         // validasi related spices
         relatedSpices = spicesList.filter{ $0.name != selectedSpice?.name }
         
+        // debug
+        for item in relatedSpices! {
+            print(item.name as Any)
+        }
+        
+        DispatchQueue.main.async {
+            self.relatedCollectionView.reloadData()
+            self.usageCollectionView.reloadData()
+        }
+        
         // Update layout for selected spices
-        detailImage.image = selectedSpice?.image
-        detailName.text = selectedSpice?.name
+        detailImage.image   = selectedSpice?.image
+        detailName.text     = selectedSpice?.name
         detailIndoName.text = selectedSpice?.indoName
-        detailBioName.text = selectedSpice?.bioName
+        detailBioName.text  = selectedSpice?.bioName
+        detailAroma.text    = selectedSpice?.aroma
+        detailTaste.text    = selectedSpice?.taste
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -91,6 +104,17 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         }
         
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        if collectionView == self.relatedCollectionView {
+            print("clicked:")
+            
+            selectedSpice = self.relatedSpices?[indexPath.item]
+            loadData()
+        }
+    }
+    
     // Back button action (unwind segue to the previous page where it comes from)
     @IBAction func unwindBack (_ sender: UIStoryboardSegue) {
         
