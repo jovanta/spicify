@@ -17,55 +17,38 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" ambiguous="YES" backIndicatorImage="chevron.left" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="vXN-VW-nUn">
-                                <rect key="frame" x="0.0" y="44" width="390" height="44"/>
-                                <color key="tintColor" systemColor="labelColor"/>
-                                <items>
-                                    <navigationItem id="IQb-WG-LgJ">
-                                        <barButtonItem key="leftBarButtonItem" image="chevron.left" catalog="system" style="plain" id="iMa-cQ-C0O">
-                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="mfI-zR-Pxu">
-                                                <rect key="frame" x="16" y="11" width="53" height="22"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <state key="normal" title="Back" image="chevron.left" catalog="system">
-                                                    <color key="titleColor" systemColor="labelColor"/>
-                                                </state>
-                                            </button>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="DetailspiceCardHeader" translatesAutoresizingMaskIntoConstraints="NO" id="Iql-8X-Bno">
-                                <rect key="frame" x="0.0" y="90" width="336" height="139"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="DetailspiceCardHeader" translatesAutoresizingMaskIntoConstraints="NO" id="Iql-8X-Bno">
+                                <rect key="frame" x="0.0" y="93" width="352" height="141"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Ginger" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-M1-UJm">
-                                <rect key="frame" x="204" y="116" width="132" height="34"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
-                                <color key="textColor" red="0.3411764705882353" green="0.1764705882352941" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Jahe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s2-6Y-ZgG">
-                                <rect key="frame" x="204" y="158" width="120" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jahe" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7s2-6Y-ZgG">
+                                <rect key="frame" x="193" y="158" width="120" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" red="0.3411764706" green="0.1764705882" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Zingiber officinale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJy-8o-h6y">
-                                <rect key="frame" x="204" y="183" width="132" height="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Zingiber officinale" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mJy-8o-h6y">
+                                <rect key="frame" x="193" y="183" width="132" height="17"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="14"/>
                                 <color key="textColor" red="0.3411764706" green="0.1764705882" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="Ginger Main" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-tF-UoR">
-                                <rect key="frame" x="16" y="102" width="180" height="115"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Ginger Main" translatesAutoresizingMaskIntoConstraints="NO" id="ILk-tF-UoR">
+                                <rect key="frame" x="16" y="102" width="169" height="122"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Characteristic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbh-4m-qXh">
-                                <rect key="frame" x="16" y="247" width="320" height="27"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Characteristic" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bbh-4m-qXh">
+                                <rect key="frame" x="16" y="247" width="137.33333333333334" height="27"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" weight="medium" pointSize="22"/>
                                 <color key="textColor" red="0.3411764706" green="0.1764705882" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dZ-Zg-xl8">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Aroma" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9dZ-Zg-xl8">
                                 <rect key="frame" x="16" y="279" width="160" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
                                 <color key="textColor" red="0.71372549019607845" green="0.30196078431372547" blue="0.22745098039215686" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -90,29 +73,29 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="oNc-MG-fHe">
-                                <rect key="frame" x="16" y="376" width="358" height="60"/>
+                                <rect key="frame" x="16" y="376" width="358" height="83"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pZF-iY-CTe">
-                                    <size key="itemSize" width="40" height="40"/>
+                                    <size key="itemSize" width="67" height="74"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="I4N-BQ-JNH" customClass="UsageCollectionViewCell" customModule="Spicify" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="UsageCell" id="I4N-BQ-JNH" customClass="UsageCollectionViewCell" customModule="Spicify" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="67" height="74"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Gsi-YT-b7x">
-                                            <rect key="frame" x="0.0" y="0.0" width="60" height="60"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="67" height="74"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dressing Icon" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-K0-HRg">
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Dressing Icon" translatesAutoresizingMaskIntoConstraints="NO" id="GGa-K0-HRg">
                                                     <rect key="frame" x="5" y="0.0" width="51" height="43"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dressing" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q4W-fO-ih2">
-                                                    <rect key="frame" x="0.0" y="43" width="60" height="16"/>
+                                                    <rect key="frame" x="0.0" y="45" width="67" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <nil key="textColor"/>
@@ -120,7 +103,7 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="60" height="60"/>
+                                        <size key="customSize" width="67" height="74"/>
                                         <connections>
                                             <outlet property="usageImage" destination="GGa-K0-HRg" id="rkL-ku-OMs"/>
                                             <outlet property="usageLabel" destination="Q4W-fO-ih2" id="tja-uv-itX"/>
@@ -165,7 +148,7 @@
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="oIo-sb-spB" customClass="RelatedSpiceCollectionViewCell" customModule="Spicify" customModuleProvider="target">
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="RelatedCell" id="oIo-sb-spB" customClass="RelatedSpiceCollectionViewCell" customModule="Spicify" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="0.0" width="102" height="121"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Nxd-Zx-cVQ">
@@ -200,30 +183,24 @@
                                 <color key="textColor" red="0.3411764706" green="0.1764705882" blue="0.08235294118" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WrX-Nt-MqP">
+                                <rect key="frame" x="13" y="56" width="53" height="22"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Back" image="chevron.left" catalog="system">
+                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ginger" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dVb-M1-UJm">
+                                <rect key="frame" x="193" y="116" width="132" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" red="0.3411764705882353" green="0.1764705882352941" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="OZ5-Oi-w1W"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="OZ5-Oi-w1W" firstAttribute="trailing" secondItem="ILk-tF-UoR" secondAttribute="trailing" constant="194" id="0aH-Sh-8YL"/>
-                            <constraint firstItem="7s2-6Y-ZgG" firstAttribute="leading" secondItem="ILk-tF-UoR" secondAttribute="trailing" constant="8" id="2jk-le-Vhi"/>
-                            <constraint firstItem="mJy-8o-h6y" firstAttribute="top" secondItem="7s2-6Y-ZgG" secondAttribute="bottom" constant="8" id="3fO-Ca-Nb5"/>
-                            <constraint firstItem="Iql-8X-Bno" firstAttribute="leading" secondItem="OZ5-Oi-w1W" secondAttribute="leading" id="4up-mq-Drs"/>
-                            <constraint firstItem="7s2-6Y-ZgG" firstAttribute="centerY" secondItem="x4c-aD-1QH" secondAttribute="centerY" id="8Kj-9s-Rpr"/>
-                            <constraint firstItem="Bbh-4m-qXh" firstAttribute="top" secondItem="ILk-tF-UoR" secondAttribute="bottom" constant="32" id="8Tr-ss-Wqn"/>
-                            <constraint firstItem="OZ5-Oi-w1W" firstAttribute="trailing" secondItem="Iql-8X-Bno" secondAttribute="trailing" constant="54" id="Ewr-cg-txO"/>
-                            <constraint firstItem="OZ5-Oi-w1W" firstAttribute="trailing" secondItem="7s2-6Y-ZgG" secondAttribute="trailing" constant="66" id="VcV-EV-O30"/>
-                            <constraint firstItem="9dZ-Zg-xl8" firstAttribute="top" secondItem="Bbh-4m-qXh" secondAttribute="bottom" constant="5" id="XIH-1e-ZFW"/>
-                            <constraint firstItem="7s2-6Y-ZgG" firstAttribute="top" secondItem="dVb-M1-UJm" secondAttribute="bottom" constant="8" id="bZU-Sf-I0p"/>
-                            <constraint firstItem="mJy-8o-h6y" firstAttribute="top" secondItem="7s2-6Y-ZgG" secondAttribute="bottom" constant="8" id="gBf-42-Lpm"/>
-                            <constraint firstItem="Iql-8X-Bno" firstAttribute="top" secondItem="vXN-VW-nUn" secondAttribute="bottom" id="gUj-8j-A66"/>
-                            <constraint firstItem="ILk-tF-UoR" firstAttribute="leading" secondItem="OZ5-Oi-w1W" secondAttribute="leading" constant="16" id="jnA-RQ-DPJ"/>
-                            <constraint firstItem="OZ5-Oi-w1W" firstAttribute="trailing" secondItem="Bbh-4m-qXh" secondAttribute="trailing" constant="54" id="jnI-RB-Bmz"/>
-                            <constraint firstItem="Bbh-4m-qXh" firstAttribute="leading" secondItem="OZ5-Oi-w1W" secondAttribute="leading" constant="16" id="lmR-wn-UnI"/>
-                            <constraint firstItem="7s2-6Y-ZgG" firstAttribute="leading" secondItem="ILk-tF-UoR" secondAttribute="trailing" constant="8" id="r5t-ha-5sW"/>
-                            <constraint firstItem="Bbh-4m-qXh" firstAttribute="top" secondItem="Iql-8X-Bno" secondAttribute="bottom" constant="20" id="rEH-dL-Kzg"/>
-                            <constraint firstItem="7s2-6Y-ZgG" firstAttribute="top" secondItem="dVb-M1-UJm" secondAttribute="bottom" constant="8" id="ucA-xO-fsA"/>
-                            <constraint firstItem="ILk-tF-UoR" firstAttribute="top" secondItem="vXN-VW-nUn" secondAttribute="bottom" constant="12" id="zJD-cm-jpX"/>
-                        </constraints>
                     </view>
                     <connections>
                         <outlet property="relatedCollectionView" destination="6ZJ-Nu-lWS" id="XmF-CQ-a4w"/>
@@ -242,9 +219,6 @@
         <image name="Ginger Main" width="1130" height="733"/>
         <image name="RelatedGalangal" width="112" height="102"/>
         <image name="chevron.left" catalog="system" width="96" height="128"/>
-        <systemColor name="labelColor">
-            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
