@@ -26,14 +26,23 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     }()
     
     
+    //@IBOutlet weak var shutterButton: UIButton!
+    @IBOutlet var bottomView: UIView!
+    @IBOutlet weak var snaptipsBtn: UIButton!
+    @IBOutlet weak var libraryBtn: UIButton!
     
     
+
     var prediction = String()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
+        view.addSubview(bottomView)
+        view.addSubview(snaptipsBtn)
+        view.addSubview(libraryBtn)
         view.addSubview(shutterButton)
         self.navigationController?.isNavigationBarHidden = true
         checkCameraPermission()
@@ -44,17 +53,20 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
-        
-        shutterButton.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
+       shutterButton.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
+        snaptipsBtn.center = CGPoint(x: view.frame.size.width*0.8, y: view.frame.size.height - 100)
+        libraryBtn.center = CGPoint(x: view.frame.size.width*0.2, y: view.frame.size.height - 100)
     }
 
     func checkCameraPermission(){
@@ -110,8 +122,12 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         if (segue.identifier == "informationSegue") {
             let vc = segue.destination as! InformationViewController
                 vc.prediction = prediction
-        }
-
+     }
+        
+        /*if (segue.identifier == "AlertVC") {
+            let vc = segue.destination as! maincameraViewController
+            vc.prediction = prediction
+            }*/
         
     }
     
@@ -175,16 +191,14 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     
     
     
-    @IBOutlet weak var snaptipsBtn: UIButton!
-    
-    
-    
+  
     
     @IBAction func snaptipsBtn(_ sender: UIButton) {
-    
-
+    performSegue(withIdentifier: "AlertVC", sender: self)
+        
     }
     
+   
     
     /*
     // MARK: - Navigation
