@@ -52,11 +52,20 @@
                         <outlet property="background" destination="JXm-od-Joe" id="zIq-ge-CNm"/>
                         <outlet property="pageControl" destination="pOX-nf-OQd" id="57N-0b-VdL"/>
                         <outlet property="scrollView" destination="oUt-F6-izE" id="fO3-hh-xBC"/>
+                        <segue destination="Fl2-tZ-oez" kind="showDetail" identifier="ToCameraScreen" id="jlz-dd-a5V"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="20" y="94"/>
+        </scene>
+        <!--maincamera-->
+        <scene sceneID="nfS-mR-2oH">
+            <objects>
+                <viewControllerPlaceholder storyboardName="maincamera" id="Fl2-tZ-oez" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fPN-ja-ijY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="555" y="54"/>
         </scene>
     </scenes>
     <resources>
