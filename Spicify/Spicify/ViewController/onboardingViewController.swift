@@ -78,7 +78,7 @@ class onboardingViewController: UIViewController, UIScrollViewDelegate {
                 button.layer.cornerRadius = 7
                 button.isEnabled = true
                 button.isUserInteractionEnabled = true
-               // button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
+                button.addTarget(self, action: #selector(didTapButton), for: .touchUpInside)
                 
                 slide.addSubview(button)
             }
@@ -95,6 +95,10 @@ class onboardingViewController: UIViewController, UIScrollViewDelegate {
 
         pageControl.numberOfPages = titles.count
         pageControl.currentPage = 0
+    }
+    
+    @objc func didTapButton(_ sender: UIButton) {
+        performSegue(withIdentifier: "ToCameraScreen", sender: nil)
     }
     
     @objc func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
