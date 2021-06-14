@@ -238,6 +238,7 @@
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
                                 <connections>
+                                    <action selector="unwindBack:" destination="3uE-EV-7ay" eventType="touchUpInside" id="xGo-Uh-vuW"/>
                                     <segue destination="owA-qL-QdT" kind="unwind" unwindAction="unwindBack:" id="Mes-nX-cHS"/>
                                 </connections>
                             </button>

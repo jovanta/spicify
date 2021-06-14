@@ -18,18 +18,17 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var detailAroma: UILabel!
     @IBOutlet weak var detailTaste: UILabel!
     
-    var prediction = String()
-    
     // Predefine spices
     public let spicesList : [Spice] = [
-        Spice(name: "Ginger", indoName: "Jahe", bioName: "Zingiber officinale", aroma: "Pungent - Spicy", taste: "Peppery Sweet", type: SpiceType.ginger),
-        Spice(name: "Turmeric", indoName: "Kunyit", bioName: "Curcuma longa", aroma: "Orangey Ginger", taste: "Pungent - Bitter", type: SpiceType.turmeric),
-        Spice(name: "Galangal", indoName: "Lengkuas", bioName: "Alphinia galanga", aroma: "Peppery Strong", taste: "Extra Citrusy", type: SpiceType.galangal),
-        Spice(name: "Aromatic Ginger", indoName: "Kencur", bioName: "Kaempferia galanga", aroma: "Slightly Spicy", taste: "Sickly Sweet", type: SpiceType.aromaticGinger)
+        Spice(nameID: "jahe", name: "Ginger", indoName: "Jahe", bioName: "Zingiber officinale", aroma: "Pungent - Spicy", taste: "Peppery Sweet", type: SpiceType.ginger),
+        Spice(nameID: "kunyit", name: "Turmeric", indoName: "Kunyit", bioName: "Curcuma longa", aroma: "Orangey Ginger", taste: "Pungent - Bitter", type: SpiceType.turmeric),
+        Spice(nameID: "lengkuas", name: "Galangal", indoName: "Lengkuas", bioName: "Alphinia galanga", aroma: "Peppery Strong", taste: "Extra Citrusy", type: SpiceType.galangal),
+        Spice(nameID: "kencur", name: "Aromatic Ginger", indoName: "Kencur", bioName: "Kaempferia galanga", aroma: "Slightly Spicy", taste: "Sickly Sweet", type: SpiceType.aromaticGinger)
     ]
     
-    var selectedSpice : Spice?
-    var relatedSpices : [Spice]?
+    var prediction      : String?
+    var selectedSpice   : Spice?
+    var relatedSpices   : [Spice]?
   
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,8 +39,13 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         relatedCollectionView.delegate = self
         relatedCollectionView.dataSource = self
         
-        // take the scanned spices
-        selectedSpice = spicesList[0]
+        // Validasi parameter prediction
+        if prediction == nil || prediction == "" {
+            selectedSpice = spicesList[0]
+        } else {
+            selectedSpice = spicesList.filter{ $0.nameID == prediction }[0]
+        }
+        // load the spice details
         loadData()
     }
     
@@ -77,7 +81,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
             let usagelist = selectedSpice?.usageList
             return usagelist!.count
         }
-        else{
+        else {
             // showing the qty of related cell
             return relatedSpices!.count
         }
@@ -117,7 +121,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     
     // Back button action (unwind segue to the previous page where it comes from)
     @IBAction func unwindBack (_ sender: UIStoryboardSegue) {
-        
+        //
     }
 
 }
