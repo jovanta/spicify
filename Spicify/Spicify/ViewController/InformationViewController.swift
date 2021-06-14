@@ -27,6 +27,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     ]
     
     var prediction      : String?
+    var flagfromScan    : Bool = false
     var selectedSpice   : Spice?
     var relatedSpices   : [Spice]?
   
@@ -39,7 +40,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         relatedCollectionView.delegate = self
         relatedCollectionView.dataSource = self
         
-        // Validasi parameter prediction
+        // validation parameter prediction from scan
         if prediction == nil || prediction == "" {
             selectedSpice = spicesList[0]
         } else {
@@ -49,10 +50,19 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         loadData()
     }
     
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(true)
+        
+        if flagfromScan {
+            // Showing pop up discovered
+            showAlert()
+        }
+    }
+    
     // Take from scan result and validate
     func loadData(){
         
-        // validasi related spices
+        // validation related spices
         relatedSpices = spicesList.filter{ $0.name != selectedSpice?.name }
         
         // debug
@@ -60,6 +70,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
             print(item.name as Any)
         }
         
+        // reload the collectionViews for each spice selected
         DispatchQueue.main.async {
             self.relatedCollectionView.reloadData()
             self.usageCollectionView.reloadData()
@@ -72,6 +83,8 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         detailBioName.text  = selectedSpice?.bioName
         detailAroma.text    = selectedSpice?.aroma
         detailTaste.text    = selectedSpice?.taste
+        
+        //showAlert()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -106,7 +119,6 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
             cellRelated.relatedSpiceImage.image = relatedSpices?[indexPath.item].relatedImage
             return cellRelated
         }
-        
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
@@ -116,6 +128,59 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
             
             selectedSpice = self.relatedSpices?[indexPath.item]
             loadData()
+        }
+    }
+    
+    func showAlert(){
+        
+        let jaheDiscover = UserDefaults.standard.bool(forKey: "jaheDiscovered")
+        let kunyitDiscover = UserDefaults.standard.bool(forKey: "kunyitDiscovered")
+        let lengkuasDiscover = UserDefaults.standard.bool(forKey: "lengkuasDiscovered")
+        let kencurDiscover = UserDefaults.standard.bool(forKey: "kencurDiscovered")
+        
+        var flagShow = false
+        
+        switch selectedSpice?.nameID {
+        case "jahe":
+            if jaheDiscover == false {
+                flagShow = true
+                //UserDefaults.standard.setValue(true, forKey: "jaheDiscovered")
+            } else { flagShow = false }
+            
+        case "kunyit":
+            if kunyitDiscover == false {
+                flagShow = true
+                //UserDefaults.standard.setValue(true, forKey: "kunyitDiscovered")
+            } else { flagShow = false }
+            
+        case "lengkuas":
+            if lengkuasDiscover == false {
+                flagShow = true
+                //UserDefaults.standard.setValue(true, forKey: "lengkuasDiscovered")
+            } else { flagShow = false }
+            
+        case "kencur":
+            if kencurDiscover == false {
+                flagShow = true
+                //UserDefaults.standard.setValue(true, forKey: "kencurDiscovered")
+            } else { flagShow = false }
+            
+        default:
+            return
+        }
+        
+        if flagShow == true {
+            
+            if let itemName = selectedSpice?.name {
+                
+                let alert = UIAlertController(title: "\(itemName) Discovered !", message: "\(itemName) is available now in the Library", preferredStyle: UIAlertController.Style.alert)
+
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            }
         }
     }
     
