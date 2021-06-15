@@ -8,6 +8,10 @@ An iOS app that intended for beginner home-cook to identify Indonesian cooking s
 - Identify Spices using Machine Learning
 - Spices Library
 
+<p align="center">
+  <img height="500" src="">
+</p>
+
 Indonesian spices are one of the endemic ingredients that are very close to Indonesian people and also one of the important ingredients in Indonesian dishes because of its benefit such as health benefits, a natural preservative, and enhance the flavour of the dish as every spices have their own unique taste and aroma.
 
 From our research and interview with beginner home-cook, we find that identifying spices can play a big role during ingredients preparation. Once the spices are identified, they can proceed further in the cooking process. One of the way for identifying spices are by its form and characteristic. Visual learning is one of the best method based on our interview and research, as they can easily respond to visual information faster as compared to text only materials.
