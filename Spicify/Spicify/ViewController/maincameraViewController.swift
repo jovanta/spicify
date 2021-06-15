@@ -122,6 +122,8 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         if (segue.identifier == "informationSegue") {
             let vc = segue.destination as! InformationViewController
                 vc.prediction = prediction
+            vc.flagfromScan = true
+            
      }
         
         /*if (segue.identifier == "AlertVC") {

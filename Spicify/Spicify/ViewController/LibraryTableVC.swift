@@ -7,4 +7,7 @@ class LibraryTableVC: UITableViewCell {
     @IBOutlet weak var spicesTitleLabel: UILabel!
     @IBOutlet weak var spicesView: UIView!
     @IBOutlet weak var spicesSubLabel: UILabel!
+    
+    
+    
 }
