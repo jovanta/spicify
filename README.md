@@ -1,16 +1,13 @@
 ## Spicify
 Scan your unknown rhizome root spice and identify it
 
-#
 ## Overview
 An iOS app that intended for beginner home-cook to identify Indonesian cooking spices (rhizome root) using visual recognition and spices library to help user learn about the spices by displaying its usage, characteristic, and form using machine learning. This will help beginner home-cook to efficiently manage and organise their cooking ingredients, that leads to improving their knowledge about spices and the quality level of their dishes. 
 
-#
 ## Features
 - Identify Spices using Machine Learning
 - Spices Library
 
-#
 ## Our Synthesis
 Indonesian spices are one of the endemic ingredients that are very close to Indonesian people and also one of the important ingredients in Indonesian dishes because of its benefit such as health benefits, a natural preservative, and enhance the flavour of the dish as every spices have their own unique taste and aroma.
 
