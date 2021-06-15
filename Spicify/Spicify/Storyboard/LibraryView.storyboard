@@ -45,7 +45,7 @@
                                                                     <rect key="frame" x="14" y="2" width="118" height="34"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="28"/>
-                                                                    <color key="textColor" red="0.93372356889999997" green="0.98419791459999995" blue="0.9882379174" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                             </subviews>
@@ -99,6 +99,9 @@
                                 <state key="normal" title="Back" image="chevron.left" catalog="system">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 </state>
+                                <connections>
+                                    <segue destination="eHS-Pg-NWf" kind="unwind" unwindAction="unwindBack:" id="jgn-Ls-H5N"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zGe-CM-69i"/>
@@ -116,6 +119,7 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2N-h6-O44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="eHS-Pg-NWf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="100" y="160.66350710900474"/>
         </scene>
