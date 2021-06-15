@@ -11,7 +11,7 @@
         <!--LibraryVC-->
         <scene sceneID="baI-IF-EO7">
             <objects>
-                <viewController id="5D2-ms-grz" customClass="LibraryVC" customModule="Spicify" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="libraryVC" id="5D2-ms-grz" customClass="LibraryVC" customModule="Spicify" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Qm0-nV-w64">
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

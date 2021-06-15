@@ -7,13 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		3956FD1A2673532600F5238E /* popupAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3956FD192673532600F5238E /* popupAlertViewController.swift */; };
 		414DED0F266F5341001B94B2 /* Onboarding.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 414DED0E266F5341001B94B2 /* Onboarding.storyboard */; };
 		414DED11266F53FB001B94B2 /* onboardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414DED10266F53FB001B94B2 /* onboardingViewController.swift */; };
 		4EB55062266F5D9700E5A0FF /* SpiceRecognition .mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4EB55061266F5D9700E5A0FF /* SpiceRecognition .mlmodel */; };
 		4EC535E8266F550000DF2A73 /* maincamera.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EC535E7266F550000DF2A73 /* maincamera.storyboard */; };
 		4EC535EA266F552700DF2A73 /* maincameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EC535E9266F552700DF2A73 /* maincameraViewController.swift */; };
+		E00F053D26788EB4004B0B4A /* LibraryTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F053B26788EB4004B0B4A /* LibraryTableVC.swift */; };
+		E00F053E26788EB4004B0B4A /* LibraryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00F053C26788EB4004B0B4A /* LibraryVC.swift */; };
+		E00F054326788EC6004B0B4A /* LibraryView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E00F054226788EC6004B0B4A /* LibraryView.storyboard */; };
 		E0231274267139F3006E1974 /* SpiceModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0231273267139F3006E1974 /* SpiceModel.swift */; };
 		E02312882672117A006E1974 /* UsageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E02312872672117A006E1974 /* UsageCollectionViewCell.swift */; };
 		E023128D267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E023128C267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift */; };
@@ -45,13 +47,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-
 		3956FD192673532600F5238E /* popupAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = popupAlertViewController.swift; sourceTree = "<group>"; };
 		414DED0E266F5341001B94B2 /* Onboarding.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Onboarding.storyboard; sourceTree = "<group>"; };
 		414DED10266F53FB001B94B2 /* onboardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = onboardingViewController.swift; sourceTree = "<group>"; };
 		4EB55061266F5D9700E5A0FF /* SpiceRecognition .mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = "SpiceRecognition .mlmodel"; sourceTree = "<group>"; };
 		4EC535E7266F550000DF2A73 /* maincamera.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = maincamera.storyboard; sourceTree = "<group>"; };
 		4EC535E9266F552700DF2A73 /* maincameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = maincameraViewController.swift; sourceTree = "<group>"; };
+		E00F053B26788EB4004B0B4A /* LibraryTableVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryTableVC.swift; sourceTree = "<group>"; };
+		E00F053C26788EB4004B0B4A /* LibraryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LibraryVC.swift; sourceTree = "<group>"; };
+		E00F054226788EC6004B0B4A /* LibraryView.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LibraryView.storyboard; sourceTree = "<group>"; };
 		E0231273267139F3006E1974 /* SpiceModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpiceModel.swift; sourceTree = "<group>"; };
 		E02312872672117A006E1974 /* UsageCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsageCollectionViewCell.swift; sourceTree = "<group>"; };
 		E023128C267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RelatedSpiceCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -151,11 +155,12 @@
 		E0C318D2266E6F1900CABE34 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E00F053B26788EB4004B0B4A /* LibraryTableVC.swift */,
+				E00F053C26788EB4004B0B4A /* LibraryVC.swift */,
 				E0C318C8266E6EFB00CABE34 /* InformationViewController.swift */,
 				4EC535E9266F552700DF2A73 /* maincameraViewController.swift */,
 				414DED10266F53FB001B94B2 /* onboardingViewController.swift */,
 				3956FD192673532600F5238E /* popupAlertViewController.swift */,
-
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -163,6 +168,7 @@
 		E0C318D3266E6F2800CABE34 /* Storyboard */ = {
 			isa = PBXGroup;
 			children = (
+				E00F054226788EC6004B0B4A /* LibraryView.storyboard */,
 				E0C318CD266E6F0F00CABE34 /* Information.storyboard */,
 				4EC535E7266F550000DF2A73 /* maincamera.storyboard */,
 				414DED0E266F5341001B94B2 /* Onboarding.storyboard */,
@@ -278,6 +284,7 @@
 				E0C3189D266E6EB900CABE34 /* Main.storyboard in Resources */,
 				E0C318E3266E767100CABE34 /* Assets.xcassets in Resources */,
 				E0C318CE266E6F0F00CABE34 /* Information.storyboard in Resources */,
+				E00F054326788EC6004B0B4A /* LibraryView.storyboard in Resources */,
 				4EC535E8266F550000DF2A73 /* maincamera.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -304,6 +311,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E0231274267139F3006E1974 /* SpiceModel.swift in Sources */,
+				E00F053D26788EB4004B0B4A /* LibraryTableVC.swift in Sources */,
 				E0C3189A266E6EB900CABE34 /* ViewController.swift in Sources */,
 				E02312882672117A006E1974 /* UsageCollectionViewCell.swift in Sources */,
 				4EC535EA266F552700DF2A73 /* maincameraViewController.swift in Sources */,
@@ -311,6 +319,7 @@
 				E0C31896266E6EB900CABE34 /* AppDelegate.swift in Sources */,
 				3956FD1A2673532600F5238E /* popupAlertViewController.swift in Sources */,
 				E0C31898266E6EB900CABE34 /* SceneDelegate.swift in Sources */,
+				E00F053E26788EB4004B0B4A /* LibraryVC.swift in Sources */,
 				E0C318C9266E6EFB00CABE34 /* InformationViewController.swift in Sources */,
 				414DED11266F53FB001B94B2 /* onboardingViewController.swift in Sources */,
 				E023128D267214D2006E1974 /* RelatedSpiceCollectionViewCell.swift in Sources */,

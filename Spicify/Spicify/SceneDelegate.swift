@@ -30,8 +30,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
                self.window?.makeKeyAndVisible()
         */
         
-        let MainCameraStoryBoard = UIStoryboard.init(name: "maincamera", bundle: nil)
-          let FirstSetupViewController = MainCameraStoryBoard.instantiateViewController(withIdentifier: "maincameraVC") as! maincameraViewController
+        let MainCameraStoryBoard = UIStoryboard.init(name: "LibraryView", bundle: nil)
+          let FirstSetupViewController = MainCameraStoryBoard.instantiateViewController(withIdentifier: "libraryVC") as! LibraryVC
           self.window?.rootViewController = FirstSetupViewController
           self.window?.makeKeyAndVisible()
         
