@@ -3,6 +3,7 @@ import UIKit
 
 class LibraryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
+    @IBOutlet weak var tableView: UITableView!
     
     var temp = String()
     
@@ -23,27 +24,27 @@ class LibraryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        
-        temp = spicesList[indexPath.row].nameID!
-        print("this is temp: \(temp)")
         performSegue(withIdentifier: "informationSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "informationSegue" {
-            let vc = segue.destination as! InformationViewController
-            
-            switch temp {
-            case "jahe":
-                vc.prediction = "jahe"
-            case "kunyit":
-                vc.prediction = "kunyit"
-            case "lengkuas":
-                vc.prediction = "lengkuas"
-            case "kencur":
-                vc.prediction = "kencur"
-            default:
-                break
+            if let selectedIndex = self.tableView.indexPathForSelectedRow {
+                let vc = segue.destination as! InformationViewController
+                let spiceNameID = spicesList[selectedIndex.row].nameID
+                
+                switch spiceNameID {
+                case "jahe":
+                    vc.prediction = "jahe"
+                case "kunyit":
+                    vc.prediction = "kunyit"
+                case "lengkuas":
+                    vc.prediction = "lengkuas"
+                case "kencur":
+                    vc.prediction = "kencur"
+                default:
+                    break
+                }
             }
         }
     }
