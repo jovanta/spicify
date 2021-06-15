@@ -97,6 +97,7 @@ class SpiceUsage {
 }
 
 public class Spice {
+
     var nameID          : String? //ini buat cocokin sama result dari machine learning
     var name            : String?
     var indoName        : String?
@@ -107,6 +108,7 @@ public class Spice {
     var relatedImage    : UIImage?
     var type            : SpiceType?
     var usageList       : [SpiceUsage]?
+
     
     init(nameID: String?, name: String?, indoName: String?, bioName: String?, aroma: String?, taste: String?, type: SpiceType?) {
         self.nameID         = nameID
