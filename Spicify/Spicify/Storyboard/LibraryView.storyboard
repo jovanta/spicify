@@ -81,6 +81,7 @@
                                             <outlet property="spicesSubLabel" destination="6oH-v1-8kw" id="RCu-oO-mCf"/>
                                             <outlet property="spicesTitleLabel" destination="dNR-ht-H14" id="DZ0-lc-iox"/>
                                             <outlet property="spicesView" destination="p1P-7B-baQ" id="r8s-3v-aip"/>
+                                            <segue destination="tgD-k3-JAo" kind="presentation" identifier="informationSegue" modalPresentationStyle="fullScreen" id="c0O-X1-WCA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -122,6 +123,16 @@
                 <exit id="eHS-Pg-NWf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="100" y="160.66350710900474"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="MBF-mL-IWo">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="InformationViewController" storyboardName="Information" id="tgD-k3-JAo" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="zuP-H7-gwn"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1FM-6t-N0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="622" y="82"/>
         </scene>
     </scenes>
     <resources>
