@@ -3,15 +3,15 @@ import UIKit
 
 class LibraryVC: UIViewController, UITableViewDataSource {
     
-    let spicesLibrary = [
-        spiceLibrary(titleName: "Ginger", subName: "Zingiber officinale", spiceImage: #imageLiteral(resourceName: "Ginger Main")),
-        spiceLibrary(titleName: "Turmeric", subName: "Curcuma longa", spiceImage: #imageLiteral(resourceName: "Turmeric Main")),
-        spiceLibrary(titleName: "Galangal", subName: "Alpinia galanga", spiceImage: #imageLiteral(resourceName: "Galangal Main")),
-        spiceLibrary(titleName: "Aromatic Ginger", subName: "Kaempferia galanga", spiceImage: #imageLiteral(resourceName: "Aromatic Ginger Main"))
+    public let spicesList : [Spice] = [
+        Spice(name: "Ginger", indoName: "Jahe", bioName: "Zingiber officinale", aroma: "Pungent - Spicy", taste: "Peppery Sweet", type: SpiceType.ginger),
+        Spice(name: "Turmeric", indoName: "Kunyit", bioName: "Curcuma longa", aroma: "Orangey Ginger", taste: "Pungent - Bitter", type: SpiceType.turmeric),
+        Spice(name: "Galangal", indoName: "Lengkuas", bioName: "Alphinia galanga", aroma: "Peppery Strong", taste: "Extra Citrusy", type: SpiceType.galangal),
+        Spice(name: "Aromatic Ginger", indoName: "Kencur", bioName: "Kaempferia galanga", aroma: "Slightly Spicy", taste: "Sickly Sweet", type: SpiceType.aromaticGinger)
     ]
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return spicesLibrary.count
+        return spicesList.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -21,9 +21,9 @@ class LibraryVC: UIViewController, UITableViewDataSource {
         cell.libraryImageView.layer.cornerRadius = 9
         cell.layer.cornerRadius = 9
         cell.libraryImageView.image = #imageLiteral(resourceName: "DetailspiceCardHeader")
-        cell.spicesImageView.image = spicesLibrary[indexPath.row].spiceImage
-        cell.spicesTitleLabel.text = spicesLibrary[indexPath.row].titleName
-        cell.spicesSubLabel.text = spicesLibrary[indexPath.row].subName
+        cell.spicesImageView.image = spicesList[indexPath.row].image?.noir
+        cell.spicesTitleLabel.text = spicesList[indexPath.row].name
+        cell.spicesSubLabel.text = spicesList[indexPath.row].bioName
         cell.spicesView.layer.cornerRadius = 20
         cell.spicesView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMaxXMaxYCorner]
         
@@ -36,6 +36,21 @@ class LibraryVC: UIViewController, UITableViewDataSource {
         super.viewDidLoad()
         libraryTableView.dataSource = self
     }
-    
-    
 }
+
+extension UIImage {
+    var noir: UIImage? {
+        let context = CIContext(options: nil)
+        guard let currentFilter = CIFilter(name: "CIPhotoEffectNoir") else { return nil }
+        currentFilter.setValue(CIImage(image: self), forKey: kCIInputImageKey)
+        if let output = currentFilter.outputImage,
+            let cgImage = context.createCGImage(output, from: output.extent) {
+            return UIImage(cgImage: cgImage, scale: scale, orientation: imageOrientation)
+        }
+        return nil
+    }
+    
+    //let image = UIImage(...)
+    //let noirImage = image.noir // noirImage is an optional UIImage (UIImage?)
+}
+
