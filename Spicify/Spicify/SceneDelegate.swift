@@ -19,8 +19,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         let hasLaunched = UserDefaults.standard.bool(forKey: "hasLaunched")
         
-        let onBoardingStoryboard = UIStoryboard(name: "Onboarding", bundle: nil)
-        let cameraStoryboard = UIStoryboard(name: "maincamera", bundle: nil)
+        let onBoardingStoryboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+        let cameraStoryboard = UIStoryboard.init(name: "maincamera", bundle: nil)
         
         var vc : UIViewController
         
