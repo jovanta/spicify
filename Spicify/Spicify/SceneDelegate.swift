@@ -16,36 +16,32 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-
-//        let firstSetupStoryBoard = UIStoryboard.init(name: "Onboarding", bundle: nil)
-//               let firstSetupViewController = firstSetupStoryBoard.instantiateViewController(withIdentifier: "onboardingVC") as! onboardingViewController
-//               self.window?.rootViewController = firstSetupViewController
-//               self.window?.makeKeyAndVisible()
-//
-
-    
-       /* let firstSetupStoryBoard = UIStoryboard.init(name: "Onboarding", bundle: nil)
-               let firstSetupViewController = firstSetupStoryBoard.instantiateViewController(withIdentifier: "onboardingVC") as! onboardingViewController
-               self.window?.rootViewController = firstSetupViewController
-               self.window?.makeKeyAndVisible()
-        */
         
-        let MainCameraStoryBoard = UIStoryboard.init(name: "LibraryView", bundle: nil)
-          let FirstSetupViewController = MainCameraStoryBoard.instantiateViewController(withIdentifier: "libraryVC") as! LibraryVC
+        let hasLaunched = UserDefaults.standard.bool(forKey: "hasLaunched")
+        
+        let onBoardingStoryboard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+        let cameraStoryboard = UIStoryboard.init(name: "maincamera", bundle: nil)
+        
+        var vc : UIViewController
+        
+        if hasLaunched{
+            vc = cameraStoryboard.instantiateViewController(withIdentifier: "maincameraVC") as! maincameraViewController
+        } else {
+            vc = onBoardingStoryboard.instantiateViewController(withIdentifier: "onboardingVC") as! onboardingViewController
+        }
+        
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+        UserDefaults.standard.setValue(true, forKey: "hasLaunched")
+        
+        
+        /*let MainCameraStoryBoard = UIStoryboard.init(name: "Onboarding", bundle: nil)
+          let FirstSetupViewController = MainCameraStoryBoard.instantiateViewController(withIdentifier: "onboardingVC") as! onboardingViewController
           self.window?.rootViewController = FirstSetupViewController
-          self.window?.makeKeyAndVisible()
+          self.window?.makeKeyAndVisible()*/
         
-
         guard let _ = (scene as? UIWindowScene) else { return }
     }
-    
-        
-        
-     
- 
- 
-
- 
 
     func sceneDidDisconnect(_ scene: UIScene) {
         // Called as the scene is being released by the system.

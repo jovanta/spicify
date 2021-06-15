@@ -25,25 +25,26 @@ class LibraryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         temp = spicesList[indexPath.row].nameID!
-        print(temp)
+        print("this is temp: \(temp)")
         performSegue(withIdentifier: "informationSegue", sender: self)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
-        let vc = segue.destination as! InformationViewController
-        
-        switch temp {
-        case "jahe":
-            vc.prediction = "jahe"
-        case "kunyit":
-            vc.prediction = "kunyit"
-        case "lengkuas":
-            vc.prediction = "lengkuas"
-        case "kencur":
-            vc.prediction = "kencur"
-        default:
-            break
+        if segue.identifier == "informationSegue" {
+            let vc = segue.destination as! InformationViewController
+            
+            switch temp {
+            case "jahe":
+                vc.prediction = "jahe"
+            case "kunyit":
+                vc.prediction = "kunyit"
+            case "lengkuas":
+                vc.prediction = "lengkuas"
+            case "kencur":
+                vc.prediction = "kencur"
+            default:
+                break
+            }
         }
     }
     
@@ -100,6 +101,10 @@ class LibraryVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         libraryTableView.dataSource = self
+    }
+    
+    @IBAction func backtoMainCamera (_ sender: UIStoryboardSegue) {
+        performSegue(withIdentifier: "backtoMainCamera", sender: self)
     }
     
 }

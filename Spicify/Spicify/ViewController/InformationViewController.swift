@@ -35,10 +35,10 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        usageCollectionView.delegate = self
-        usageCollectionView.dataSource = self
-        relatedCollectionView.delegate = self
-        relatedCollectionView.dataSource = self
+        usageCollectionView.delegate        = self
+        usageCollectionView.dataSource      = self
+        relatedCollectionView.delegate      = self
+        relatedCollectionView.dataSource    = self
         
         // validation parameter prediction from scan
         if prediction == nil || prediction == "" {
@@ -54,13 +54,16 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         super.viewDidAppear(true)
         
         if flagfromScan {
-            // Showing pop up discovered
+            // Showing pop up alert spice discovered
             showAlert()
         }
     }
     
     // Take from scan result and validate
     func loadData(){
+        
+        print("this is prediction \(prediction)")
+        print("this is name id \(selectedSpice?.nameID)")
         
         // validation related spices
         relatedSpices = spicesList.filter{ $0.name != selectedSpice?.name }
@@ -133,10 +136,10 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     
     func showAlert(){
         
-        let jaheDiscover = UserDefaults.standard.bool(forKey: "jaheDiscovered")
-        let kunyitDiscover = UserDefaults.standard.bool(forKey: "kunyitDiscovered")
-        let lengkuasDiscover = UserDefaults.standard.bool(forKey: "lengkuasDiscovered")
-        let kencurDiscover = UserDefaults.standard.bool(forKey: "kencurDiscovered")
+        let jaheDiscover        = UserDefaults.standard.bool(forKey: "jaheDiscovered")
+        let kunyitDiscover      = UserDefaults.standard.bool(forKey: "kunyitDiscovered")
+        let lengkuasDiscover    = UserDefaults.standard.bool(forKey: "lengkuasDiscovered")
+        let kencurDiscover      = UserDefaults.standard.bool(forKey: "kencurDiscovered")
         
         var flagShow = false
         
@@ -144,25 +147,25 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         case "jahe":
             if jaheDiscover == false {
                 flagShow = true
-                //UserDefaults.standard.setValue(true, forKey: "jaheDiscovered")
+                UserDefaults.standard.setValue(true, forKey: "jaheDiscovered")
             } else { flagShow = false }
             
         case "kunyit":
             if kunyitDiscover == false {
                 flagShow = true
-                //UserDefaults.standard.setValue(true, forKey: "kunyitDiscovered")
+                UserDefaults.standard.setValue(true, forKey: "kunyitDiscovered")
             } else { flagShow = false }
             
         case "lengkuas":
             if lengkuasDiscover == false {
                 flagShow = true
-                //UserDefaults.standard.setValue(true, forKey: "lengkuasDiscovered")
+                UserDefaults.standard.setValue(true, forKey: "lengkuasDiscovered")
             } else { flagShow = false }
             
         case "kencur":
             if kencurDiscover == false {
                 flagShow = true
-                //UserDefaults.standard.setValue(true, forKey: "kencurDiscovered")
+                UserDefaults.standard.setValue(true, forKey: "kencurDiscovered")
             } else { flagShow = false }
             
         default:
@@ -173,6 +176,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
             
             if let itemName = selectedSpice?.name {
                 
+                // create the alert
                 let alert = UIAlertController(title: "\(itemName) Discovered !", message: "\(itemName) is available now in the Library", preferredStyle: UIAlertController.Style.alert)
 
                 // add an action (button)
@@ -185,9 +189,9 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     }
     
     // Back button action (unwind segue to the previous page where it comes from)
-    @IBAction func unwindBack (_ sender: UIStoryboardSegue) {
-        //
-    }
+    /*@IBAction func unwindBack (_ sender: UIStoryboardSegue) {
+        performSegue(withIdentifier: "backtoLibrary", sender: self)
+    }*/
 
 }
 
