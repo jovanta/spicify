@@ -81,7 +81,7 @@
                                             <outlet property="spicesSubLabel" destination="6oH-v1-8kw" id="RCu-oO-mCf"/>
                                             <outlet property="spicesTitleLabel" destination="dNR-ht-H14" id="DZ0-lc-iox"/>
                                             <outlet property="spicesView" destination="p1P-7B-baQ" id="r8s-3v-aip"/>
-                                            <segue destination="tgD-k3-JAo" kind="presentation" identifier="informationSegue" modalPresentationStyle="fullScreen" id="c0O-X1-WCA"/>
+                                            <segue destination="tgD-k3-JAo" kind="show" identifier="informationSegue" id="c0O-X1-WCA"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -93,17 +93,6 @@
                                 <color key="textColor" red="0.3411764705882353" green="0.1764705882352941" blue="0.082352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GQz-P4-FCB">
-                                <rect key="frame" x="20" y="44" width="58" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Back" image="chevron.left" catalog="system">
-                                    <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                </state>
-                                <connections>
-                                    <segue destination="eHS-Pg-NWf" kind="unwind" unwindAction="unwindBack:" id="jgn-Ls-H5N"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="zGe-CM-69i"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -120,9 +109,8 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2N-h6-O44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <exit id="eHS-Pg-NWf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="100" y="160.66350710900474"/>
+            <point key="canvasLocation" x="1029.2307692307693" y="160.66350710900474"/>
         </scene>
         <!--Information-->
         <scene sceneID="MBF-mL-IWo">
@@ -132,11 +120,10 @@
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1FM-6t-N0A" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="622" y="82"/>
+            <point key="canvasLocation" x="1626.9230769230769" y="67.535545023696685"/>
         </scene>
     </scenes>
     <resources>
-        <image name="chevron.left" catalog="system" width="96" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
