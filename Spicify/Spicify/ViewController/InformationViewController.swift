@@ -62,9 +62,6 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     // Take from scan result and validate
     func loadData(){
         
-        print("this is prediction \(prediction)")
-        print("this is name id \(selectedSpice?.nameID)")
-        
         // validation related spices
         relatedSpices = spicesList.filter{ $0.name != selectedSpice?.name }
         

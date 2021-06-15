@@ -106,6 +106,7 @@
                     <navigationItem key="navigationItem" id="7A2-Qg-nDJ"/>
                     <connections>
                         <outlet property="libraryTableView" destination="0tl-zL-fLP" id="JNe-iI-ZC8"/>
+                        <outlet property="tableView" destination="0tl-zL-fLP" id="KZB-5f-KjT"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R2N-h6-O44" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

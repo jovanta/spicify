@@ -26,14 +26,15 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         if hasLaunched{
             vc = cameraStoryboard.instantiateViewController(withIdentifier: "maincameraVC") as! maincameraViewController
+            let rootVC = self.window?.rootViewController as! UINavigationController
+            rootVC.pushViewController(vc, animated: true)
+            
         } else {
             vc = onBoardingStoryboard.instantiateViewController(withIdentifier: "onboardingVC") as! onboardingViewController
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            UserDefaults.standard.setValue(true, forKey: "hasLaunched")
         }
-        
-        self.window?.rootViewController = vc
-        self.window?.makeKeyAndVisible()
-        UserDefaults.standard.setValue(true, forKey: "hasLaunched")
-        
         
         /*let MainCameraStoryBoard = UIStoryboard.init(name: "Onboarding", bundle: nil)
           let FirstSetupViewController = MainCameraStoryBoard.instantiateViewController(withIdentifier: "onboardingVC") as! onboardingViewController
