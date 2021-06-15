@@ -16,6 +16,7 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
+    
     private let shutterButton : UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
@@ -23,13 +24,25 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         button.layer.borderColor = UIColor.white.cgColor
         return button
     }()
+    
+    
+    //@IBOutlet weak var shutterButton: UIButton!
+    @IBOutlet var bottomView: UIView!
+    @IBOutlet weak var snaptipsBtn: UIButton!
+    @IBOutlet weak var libraryBtn: UIButton!
+    
+    
 
     var prediction = String()
     
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         view.backgroundColor = .black
         view.layer.addSublayer(previewLayer)
+        view.addSubview(bottomView)
+        view.addSubview(snaptipsBtn)
+        view.addSubview(libraryBtn)
         view.addSubview(shutterButton)
         self.navigationController?.isNavigationBarHidden = true
         checkCameraPermission()
@@ -40,17 +53,20 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = true
+        
     }
     
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.isNavigationBarHidden = false
+        
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
-        
-        shutterButton.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
+       shutterButton.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
+        snaptipsBtn.center = CGPoint(x: view.frame.size.width*0.8, y: view.frame.size.height - 100)
+        libraryBtn.center = CGPoint(x: view.frame.size.width*0.2, y: view.frame.size.height - 100)
     }
 
     func checkCameraPermission(){
@@ -103,8 +119,16 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        let vc = segue.destination as! InformationViewController
-        vc.prediction = prediction
+        if (segue.identifier == "informationSegue") {
+            let vc = segue.destination as! InformationViewController
+                vc.prediction = prediction
+     }
+        
+        /*if (segue.identifier == "AlertVC") {
+            let vc = segue.destination as! maincameraViewController
+            vc.prediction = prediction
+            }*/
+        
     }
     
     @objc private func didTapTakePhoto(){
@@ -164,6 +188,18 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
             }
             return nil
         }
+    
+    
+    
+  
+    
+    @IBAction func snaptipsBtn(_ sender: UIButton) {
+    performSegue(withIdentifier: "AlertVC", sender: self)
+        
+    }
+    
+   
+    
     /*
     // MARK: - Navigation
 

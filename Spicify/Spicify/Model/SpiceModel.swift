@@ -97,26 +97,29 @@ class SpiceUsage {
 }
 
 public class Spice {
-    var name        : String?
-    var indoName    : String?
-    var bioName     : String?
-    var aroma       : String?
-    var taste       : String?
-    var image       : UIImage?
-    var relatedImage : UIImage?
-    var type        : SpiceType?
-    var usageList   : [SpiceUsage]?
-    var discovered : String?
+
+    var nameID          : String? //ini buat cocokin sama result dari machine learning
+    var name            : String?
+    var indoName        : String?
+    var bioName         : String?
+    var aroma           : String?
+    var taste           : String?
+    var image           : UIImage?
+    var relatedImage    : UIImage?
+    var type            : SpiceType?
+    var usageList       : [SpiceUsage]?
+
     
-    init(name: String?, indoName: String?, bioName: String?, aroma: String?, taste: String?, type: SpiceType?) {
-        self.name       = name
-        self.indoName   = indoName
-        self.bioName    = bioName
-        self.type       = type
-        self.aroma = aroma
-        self.taste = taste
-        self.image = type?.getImage()
-        self.relatedImage = type?.getRelatedImage()
-        self.usageList = type?.getUsage()
+    init(nameID: String?, name: String?, indoName: String?, bioName: String?, aroma: String?, taste: String?, type: SpiceType?) {
+        self.nameID         = nameID
+        self.name           = name
+        self.indoName       = indoName
+        self.bioName        = bioName
+        self.type           = type
+        self.aroma          = aroma
+        self.taste          = taste
+        self.image          = type?.getImage()
+        self.relatedImage   = type?.getRelatedImage()
+        self.usageList      = type?.getUsage()
     }
 }
