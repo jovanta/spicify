@@ -17,6 +17,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     @IBOutlet weak var detailImage: UIImageView!
     @IBOutlet weak var detailAroma: UILabel!
     @IBOutlet weak var detailTaste: UILabel!
+    @IBOutlet weak var infoScrollView: UIScrollView!
     
     // Predefine spices
     public let spicesList : [Spice] = [
@@ -26,6 +27,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         Spice(nameID: "kencur", name: "Aromatic Ginger", indoName: "Kencur", bioName: "Kaempferia galanga", aroma: "Slightly Spicy", taste: "Sickly Sweet", type: SpiceType.aromaticGinger)
     ]
     
+    // to catch the value from scan
     var prediction      : String?
     var flagfromScan    : Bool = false
     var selectedSpice   : Spice?
@@ -33,7 +35,6 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
   
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         
         usageCollectionView.delegate        = self
         usageCollectionView.dataSource      = self
@@ -83,11 +84,10 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         detailBioName.text  = selectedSpice?.bioName
         detailAroma.text    = selectedSpice?.aroma
         detailTaste.text    = selectedSpice?.taste
-        
-        //showAlert()
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
         // showing the qty of usage cell
         if collectionView == self.usageCollectionView {
             
@@ -100,10 +100,11 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         }
     }
     
+    // update layout for both collection views
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView == self.usageCollectionView {
             
-            // usage details
+            // showing usage details collection view
             let cellUsage = collectionView.dequeueReusableCell(withReuseIdentifier: "UsageCell", for: indexPath) as! UsageCollectionViewCell
             
             cellUsage.usageImage.image = selectedSpice?.usageList?[indexPath.item].usageImage
@@ -112,7 +113,7 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
         }
         
         else {
-            // related spices
+            // showing related spices collection view
             let cellRelated = collectionView.dequeueReusableCell(withReuseIdentifier: "RelatedCell", for: indexPath) as! RelatedSpiceCollectionViewCell
             
             cellRelated.relatedSpiceLabel.text = relatedSpices?[indexPath.item].name
@@ -124,13 +125,14 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         if collectionView == self.relatedCollectionView {
-            print("clicked:")
             
-            selectedSpice = self.relatedSpices?[indexPath.item]
-            loadData()
+            selectedSpice = self.relatedSpices?[indexPath.item] // change the detail view to the selected spice from cell related
+            loadData() // reload all the info for the selected spice
+            infoScrollView.setContentOffset(.zero, animated: true) // scroll back to top when cell in related spice clicked
         }
     }
     
+    // validation to show alert only the 1st discover
     func showAlert(){
         
         let jaheDiscover        = UserDefaults.standard.bool(forKey: "jaheDiscovered")
@@ -184,12 +186,6 @@ class InformationViewController: UIViewController, UICollectionViewDelegate, UIC
             }
         }
     }
-    
-    // Back button action (unwind segue to the previous page where it comes from)
-    /*@IBAction func unwindBack (_ sender: UIStoryboardSegue) {
-        performSegue(withIdentifier: "backtoLibrary", sender: self)
-    }*/
-
 }
 
 
