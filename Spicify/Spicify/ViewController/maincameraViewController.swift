@@ -96,6 +96,7 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     func setupCamera(){
         let session = AVCaptureSession()
         if let device = AVCaptureDevice.default(for: .video){
+            device.isFocusModeSupported(.continuousAutoFocus)
             do{
                 let input = try AVCaptureDeviceInput(device: device)
                 if session.canAddInput(input) {
@@ -196,7 +197,7 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
   
     
     @IBAction func snaptipsBtn(_ sender: UIButton) {
-    performSegue(withIdentifier: "AlertVC", sender: self)
+    //performSegue(withIdentifier: "AlertVC", sender: self)
         
     }
     
