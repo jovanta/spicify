@@ -88,7 +88,7 @@
                                 <rect key="frame" x="50" y="139" width="290" height="437"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="CorrectSnaptipsfix" translatesAutoresizingMaskIntoConstraints="NO" id="U9L-Ed-5tE">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="correct" translatesAutoresizingMaskIntoConstraints="NO" id="U9L-Ed-5tE">
                                         <rect key="frame" x="93" y="42" width="105" height="105"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
                                     </imageView>
@@ -202,12 +202,12 @@
     </scenes>
     <resources>
         <image name="BlurrySnaptipsfix" width="84" height="84"/>
-        <image name="CorrectSnaptipsfix" width="106" height="107"/>
         <image name="Library Icon" width="50" height="50"/>
         <image name="MultipleSnaptipsfix" width="82" height="83"/>
         <image name="Tips Icon" width="50" height="50"/>
         <image name="TooCloseSnaptipsfix" width="82" height="82"/>
         <image name="TooFarSnaptipsfix" width="82" height="82"/>
+        <image name="correct" width="120" height="120"/>
         <systemColor name="secondarySystemFillColor">
             <color red="0.47058823529411764" green="0.47058823529411764" blue="0.50196078431372548" alpha="0.16" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

@@ -17,8 +17,8 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
     
-    private let shutterButton : UIButton = {
-        let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+    private var shutterButton : UIButton = {
+        var button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
         button.layer.cornerRadius = 0.5 * button.bounds.size.width
         button.layer.borderWidth = 10
         button.layer.borderColor = UIColor.white.cgColor
@@ -43,6 +43,8 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
         view.addSubview(bottomView)
         view.addSubview(snaptipsBtn)
         view.addSubview(libraryBtn)
+        shutterButton.layer.frame = CGRect(x: 0, y: 0, width: view.frame.size.height/8.4 , height: view.frame.size.height/8.4)
+        shutterButton.layer.cornerRadius = 0.5 * shutterButton.bounds.size.width
         view.addSubview(shutterButton)
         self.navigationController?.isNavigationBarHidden = true
         checkCameraPermission()
@@ -64,9 +66,9 @@ class maincameraViewController: UIViewController, AVCapturePhotoCaptureDelegate 
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         previewLayer.frame = view.bounds
-       shutterButton.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - 100)
-        snaptipsBtn.center = CGPoint(x: view.frame.size.width*0.8, y: view.frame.size.height - 100)
-        libraryBtn.center = CGPoint(x: view.frame.size.width*0.2, y: view.frame.size.height - 100)
+        shutterButton.center = CGPoint(x: view.frame.size.width/2, y: view.frame.size.height - view.frame.size.height/8.4)
+        snaptipsBtn.center = CGPoint(x: view.frame.size.width*0.8, y: view.frame.size.height - view.frame.size.height/8.4)
+        libraryBtn.center = CGPoint(x: view.frame.size.width*0.2, y: view.frame.size.height - view.frame.size.height/8.4)
     }
 
     func checkCameraPermission(){
